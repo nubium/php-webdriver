@@ -206,7 +206,7 @@ class HttpCommandExecutor implements WebDriverCommandExecutor {
       $msg = sprintf(
         'Curl error thrown for http %s to %s',
         $http_method,
-        $url);
+        $this->url . $url);
       if ($params && is_array($params)) {
         $msg .= sprintf(' with params: %s', json_encode($params));
       }
